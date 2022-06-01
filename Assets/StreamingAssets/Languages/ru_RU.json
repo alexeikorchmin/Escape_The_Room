@@ -1,0 +1,68 @@
+﻿{
+  "items": [
+    {
+      "key": "StartButton",
+      "value": "Старт"
+    },
+    {
+      "key": "SettingsButton",
+      "value": "Настройки"
+    },
+    {
+      "key": "ExitGameButton",
+      "value": "Выход"
+    },
+    {
+      "key": "ContinueButton",
+      "value": "Продолжить"
+    },
+    {
+      "key": "BackToMainMenu",
+      "value": "Главное меню"
+    },
+    {
+      "key": "SettingsSound",
+      "value": "Звук"
+    },
+    {
+      "key": "SettingsMusic",
+      "value": "Музыка"
+    },
+    {
+      "key": "RusLang",
+      "value": "Русский"
+    },
+    {
+      "key": "EngLang",
+      "value": "Английский"
+    },
+    {
+      "key": "BackButton",
+      "value": "Назад"
+    },
+    {
+      "key": "InteractiveText",
+      "value": "Нажмите \"E\" для взаимодействия"
+    },
+    {
+      "key": "ChestInputPassword",
+      "value": "Введите Пароль"
+    },
+    {
+      "key": "LaptopTxtFileName",
+      "value": "акуднус то ьлорап"
+    },
+    {
+      "key": "LaptopTxtSave",
+      "value": "Сохранить"
+    },
+    {
+      "key": "CatMsg",
+      "value": "Привет! Я купил новый ноутбук. Он такой крутой! Ты уже видел?"
+    },
+    {
+      "key": "EndGameText",
+      "value": "Поздравляем! Вы прошли квест!"
+    }
+  ]
+}

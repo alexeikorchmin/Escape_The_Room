@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b66a9b39ccb08f469fb9cbcda8986b6, type: 3}
+  m_Name: Kitchen
+  m_EditorClassIdentifier: 
+  audioField:
+  - audioType: 12
+    audioClip: {fileID: 8300000, guid: ebd6de02ce9661f43ba2baddcecbb015, type: 3}
+  - audioType: 13
+    audioClip: {fileID: 8300000, guid: a501a836e0ca6a742b25bbd0c9e4ba76, type: 3}
+  - audioType: 10
+    audioClip: {fileID: 8300000, guid: e0f554918aa568141a09ac49c2b31af1, type: 3}
+  - audioType: 11
+    audioClip: {fileID: 8300000, guid: 08cdd06f848699141b57a1c67800ddea, type: 3}

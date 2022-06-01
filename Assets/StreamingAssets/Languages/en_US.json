@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "key": "StartButton",
+      "value": "Start"
+    },
+    {
+      "key": "SettingsButton",
+      "value": "Settings"
+    },
+    {
+      "key": "ExitGameButton",
+      "value": "Exit"
+    },
+    {
+      "key": "ContinueButton",
+      "value": "Resume"
+    },
+    {
+      "key": "BackToMainMenu",
+      "value": "Back to Main Menu"
+    },
+    {
+      "key": "SettingsSound",
+      "value": "Sound"
+    },
+    {
+      "key": "SettingsMusic",
+      "value": "Music"
+    },
+    {
+      "key": "RusLang",
+      "value": "Russian"
+    },
+    {
+      "key": "EngLang",
+      "value": "English"
+    },
+    {
+      "key": "BackButton",
+      "value": "Back"
+    },
+    {
+      "key": "InteractiveText",
+      "value": "Press \"E\" to interact"
+    },
+    {
+      "key": "ChestInputPassword",
+      "value": "Enter Password"
+    },
+    {
+      "key": "LaptopTxtFileName",
+      "value": "drowssap tsehc"
+    },
+    {
+      "key": "LaptopTxtSave",
+      "value": "Save"
+    },
+    {
+      "key": "CatMsg",
+      "value": "Hi! I've bought a new laptop. It's cool! Have you checked it out?"
+    },
+    {
+      "key": "EndGameText",
+      "value": "Congratulations! You've completed the quest!"
+    }
+  ]
+}

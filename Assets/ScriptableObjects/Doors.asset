@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b66a9b39ccb08f469fb9cbcda8986b6, type: 3}
+  m_Name: Doors
+  m_EditorClassIdentifier: 
+  audioField:
+  - audioType: 2
+    audioClip: {fileID: 8300000, guid: f70a7ef69aec9854d82d412076c3b7bb, type: 3}
+  - audioType: 3
+    audioClip: {fileID: 8300000, guid: 32cd04cd1d8887b45aa62b9d0ddbab7f, type: 3}
+  - audioType: 6
+    audioClip: {fileID: 8300000, guid: 57f94c08abb083145b6e62313f6a377a, type: 3}
