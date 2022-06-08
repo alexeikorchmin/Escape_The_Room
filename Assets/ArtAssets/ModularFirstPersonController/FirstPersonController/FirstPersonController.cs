@@ -10,8 +10,6 @@ using UnityEditor;
 
 public class FirstPersonController : MonoBehaviour
 {
-    private Rigidbody rb;
-
     #region Camera Movement Variables
 
     public CinemachineVirtualCamera playerCamera;
@@ -116,15 +114,18 @@ public class FirstPersonController : MonoBehaviour
 
     #endregion
 
+    private Rigidbody rb;
     private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
 
-        LaptopTriggerArea.OnFreeze += Freeze;
-        ChestTriggerArea.OnSafePanelActive += FreezeCamera;
-        FinalDoor.OnFinalDoorOpened += Freeze;
+        //LaptopTriggerArea.OnFreeze += Freeze;
+        //ChestTriggerArea.OnSafePanelActive += FreezeCamera;
+        //FinalDoor.OnFinalDoorOpened += Freeze;
+        GlobalEventManager.OnMoveFreeze += Freeze;
+        GlobalEventManager.OnCameraFreeze += FreezeCamera;
 
         animator = GetComponentInChildren<Animator>();
 
@@ -141,7 +142,7 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         if (lockCursor)
         {
@@ -190,7 +191,7 @@ public class FirstPersonController : MonoBehaviour
         #endregion
     }
 
-    float camRotation;
+    private float camRotation;
 
     private void Update()
     {
@@ -342,7 +343,7 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         #region Movement
 
@@ -413,22 +414,25 @@ public class FirstPersonController : MonoBehaviour
         #endregion
     }
 
-    private void Freeze(bool flag)
+    private void Freeze(bool canMove)
     {
-        playerCanMove = !flag;
-        cameraCanMove = !flag;
+        playerCanMove = !canMove;
+        cameraCanMove = !canMove;
+        animator.SetBool("isWalking", false);
     }
 
-    private void FreezeCamera(bool flag)
+    private void FreezeCamera(bool canMove)
     {
-        cameraCanMove = !flag;
+        cameraCanMove = !canMove;
     }
 
     private void OnDestroy()
     {
-        LaptopTriggerArea.OnFreeze -= Freeze;
-        ChestTriggerArea.OnSafePanelActive -= FreezeCamera;
-        FinalDoor.OnFinalDoorOpened -= Freeze;
+        //LaptopTriggerArea.OnFreeze -= Freeze;
+        //ChestTriggerArea.OnSafePanelActive -= FreezeCamera;
+        //FinalDoor.OnFinalDoorOpened -= Freeze;
+        GlobalEventManager.OnMoveFreeze -= Freeze;
+        GlobalEventManager.OnCameraFreeze -= FreezeCamera;
     }
 
     private void CheckGround()
@@ -448,7 +452,7 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    IEnumerator WaitAnimationCoroutine()
+    private IEnumerator WaitAnimationCoroutine()
     {
         animator.Play("Jumping");
         yield return new WaitForSeconds(0.5f);
