@@ -119,16 +119,11 @@ public class FirstPersonController : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-
-        //LaptopTriggerArea.OnFreeze += Freeze;
-        //ChestTriggerArea.OnSafePanelActive += FreezeCamera;
-        //FinalDoor.OnFinalDoorOpened += Freeze;
         GlobalEventManager.OnMoveFreeze += Freeze;
         GlobalEventManager.OnCameraFreeze += FreezeCamera;
 
+        rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-
         crosshairObject = GetComponentInChildren<Image>();
 
         playerCamera.m_Lens.FieldOfView = fov;
@@ -428,9 +423,6 @@ public class FirstPersonController : MonoBehaviour
 
     private void OnDestroy()
     {
-        //LaptopTriggerArea.OnFreeze -= Freeze;
-        //ChestTriggerArea.OnSafePanelActive -= FreezeCamera;
-        //FinalDoor.OnFinalDoorOpened -= Freeze;
         GlobalEventManager.OnMoveFreeze -= Freeze;
         GlobalEventManager.OnCameraFreeze -= FreezeCamera;
     }

@@ -1,10 +1,7 @@
 using UnityEngine;
-using System;
 
 public class LaptopTriggerArea : Interactable
 {
-    //public static event Action<bool> OnFreeze;
-
     [SerializeField] private GameObject laptopDesktop;
     [SerializeField] private GameObject cameraLaptop;
     [SerializeField] private GameObject cameraPlayer;
@@ -31,7 +28,6 @@ public class LaptopTriggerArea : Interactable
         cameraLaptop.SetActive(isActive);
         cameraPlayer.SetActive(!isActive);
         GlobalEventManager.OnMoveFreeze?.Invoke(isActive);
-        //OnFreeze?.Invoke(isActive);
         Cursor.lockState = cursorLockMode;
     }
 }

@@ -63,6 +63,10 @@
     {
       "key": "EndGameText",
       "value": "Congratulations! You've completed the quest!"
+    },
+    {
+      "key": "GameRules",
+      "value": "Hello and welcome to the quest! The rules of this game are pretty easy - find a way out of the house. Good luck!"
     }
   ]
 }

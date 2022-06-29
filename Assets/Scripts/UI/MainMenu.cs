@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
 
     public void ExitGame()
     {
-        StartCoroutine(WaitSceneLoadingCoroutine());
+        StartCoroutine(WaitBeforeExitCoroutine());
     }
 
     public void BackToMainMenu()
@@ -29,11 +29,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    private IEnumerator WaitSceneLoadingCoroutine()
+    private IEnumerator WaitBeforeExitCoroutine()
     {
         OnButtonClicked?.Invoke();
         yield return new WaitForSeconds(1f);
-        print("Good Bye");
-        //Application.Quit();
+        Application.Quit();
     }
 }

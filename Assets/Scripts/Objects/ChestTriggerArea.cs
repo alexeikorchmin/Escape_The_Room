@@ -5,7 +5,6 @@ using System;
 public class ChestTriggerArea : Interactable
 {
     public static event Action<bool> OnChestOpen;
-    //public static event Action<bool> OnSafePanelActive;
 
     [SerializeField] private Text codeText;
     [SerializeField] private GameObject safePanel;
@@ -36,7 +35,6 @@ public class ChestTriggerArea : Interactable
             isSafeOpen = true;
             OnChestOpen?.Invoke(true);
             GlobalEventManager.OnCameraFreeze?.Invoke(false);
-            //OnSafePanelActive?.Invoke(false);
         }
 
         if (passwordInputValue.Length >= 5)
@@ -56,7 +54,6 @@ public class ChestTriggerArea : Interactable
                 safePanel.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined;
                 GlobalEventManager.OnCameraFreeze?.Invoke(true);
-                //OnSafePanelActive?.Invoke(true);
 
                 if (Input.GetKeyUp(KeyCode.E))
                 {
@@ -72,7 +69,6 @@ public class ChestTriggerArea : Interactable
                     isSafeOpen = false;
                     safePanel.SetActive(true);
                     GlobalEventManager.OnCameraFreeze?.Invoke(true);
-                    //OnSafePanelActive?.Invoke(true);
                 }
             }
         }
@@ -85,7 +81,6 @@ public class ChestTriggerArea : Interactable
             safePanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             GlobalEventManager.OnCameraFreeze?.Invoke(false);
-            //OnSafePanelActive?.Invoke(false);
         }
     }
 }
